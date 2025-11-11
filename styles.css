@@ -24,6 +24,35 @@ body {
   line-height: 1.6;
 }
 
+.whatsapp-float {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(12, 35, 64, 0.15);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1100;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(12, 35, 64, 0.25);
+}
+
+.whatsapp-float__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
 img {
   max-width: 100%;
   display: block;
