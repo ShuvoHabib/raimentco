@@ -92,91 +92,6 @@
       </div>
     </section>
 
-    <section class="section section--showcase" id="showcase">
-      <div class="container section__inner">
-        <div class="showcase__header">
-          <h2 class="section__title">Garment Showcase</h2>
-          <p class="section__text">
-            Explore a curated selection of garments produced through our trusted partners, highlighting knitwear, outerwear, and fashion-forward looks that embody Raiment Co.'s sourcing expertise.
-          </p>
-        </div>
-        <div class="carousel" data-carousel>
-          <button class="carousel__control carousel__control--prev" type="button" data-carousel-prev aria-label="Previous garment">
-            <span class="sr-only">Previous garment</span>
-          </button>
-          <div class="carousel__viewport">
-            <div class="carousel__slides">
-              <figure class="carousel__slide carousel__slide--active" data-carousel-slide>
-                <img src="assets/gallery/production-line-jackets.jpg" alt="Line of tailored jackets in a garment production floor" />
-                <figcaption class="carousel__caption">Precision outerwear finishing within a compliant production line.</figcaption>
-              </figure>
-              <figure class="carousel__slide" data-carousel-slide>
-                <img src="assets/gallery/knitwear-display.jpg" alt="Stack of premium knit sweaters in assorted neutral tones" />
-                <figcaption class="carousel__caption">Luxurious knit sweaters crafted with responsibly sourced yarns.</figcaption>
-              </figure>
-              <figure class="carousel__slide" data-carousel-slide>
-                <img src="assets/gallery/denim-quality-check.jpg" alt="Technician inspecting denim garments for quality control" />
-                <figcaption class="carousel__caption">Meticulous quality inspections ensure every detail meets your brief.</figcaption>
-              </figure>
-              <figure class="carousel__slide" data-carousel-slide>
-                <img src="assets/gallery/factory-floor-outerwear.jpg" alt="Workers assembling performance outerwear on a factory floor" />
-                <figcaption class="carousel__caption">High-performance outerwear assembled with efficiency and care.</figcaption>
-              </figure>
-              <figure class="carousel__slide" data-carousel-slide>
-                <img src="assets/gallery/model-knitwear-studio.jpg" alt="Model wearing a modern knit cardigan sourced by Raiment Co." />
-                <figcaption class="carousel__caption">Modern silhouettes brought to life by models showcasing knit collections.</figcaption>
-              </figure>
-            </div>
-          </div>
-          <button class="carousel__control carousel__control--next" type="button" data-carousel-next aria-label="Next garment">
-            <span class="sr-only">Next garment</span>
-          </button>
-          <div class="carousel__indicators" role="tablist" aria-label="Garment selections">
-            <button class="carousel__indicator carousel__indicator--active" type="button" data-carousel-indicator aria-label="Show garment 1"></button>
-            <button class="carousel__indicator" type="button" data-carousel-indicator aria-label="Show garment 2"></button>
-            <button class="carousel__indicator" type="button" data-carousel-indicator aria-label="Show garment 3"></button>
-            <button class="carousel__indicator" type="button" data-carousel-indicator aria-label="Show garment 4"></button>
-            <button class="carousel__indicator" type="button" data-carousel-indicator aria-label="Show garment 5"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--gallery" id="gallery">
-      <div class="container section__inner">
-        <h2 class="section__title section__title--center">Product Gallery</h2>
-        <p class="section__text section__text--center">
-          From fabric development to final fittings, our gallery features garments and models that reflect the diversity of Raiment Co.'s sourcing capabilities across Bangladesh.
-        </p>
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="assets/gallery/casual-wear-collection.jpg" alt="Curated rack of casual wear garments ready for shipment" />
-            <figcaption class="gallery-item__caption">Curated casual wear capsules organized for global retailers.</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery/model-outerwear.jpg" alt="Model showcasing a tailored overcoat from Raiment Co.'s suppliers" />
-            <figcaption class="gallery-item__caption">Model styling showcases the tailoring finesse of partner factories.</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery/fabric-sourcing.jpg" alt="Bundles of colorful fabrics sourced for garment production" />
-            <figcaption class="gallery-item__caption">Premium fabric swatches sourced through our yarn and trims network.</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery/model-knit-dress.jpg" alt="Model wearing a knit dress highlighting Raiment Co.'s product development" />
-            <figcaption class="gallery-item__caption">Models present knit innovations designed for modern collections.</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery/sweater-production-detail.jpg" alt="Close-up of sweater production detailing on the factory floor" />
-            <figcaption class="gallery-item__caption">Sweater production detailing underscores our quality oversight.</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/gallery/outerwear-hanging.jpg" alt="Outerwear garments hanging in a finishing room" />
-            <figcaption class="gallery-item__caption">Outerwear collections prepared for final compliance checks.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
     <section class="section section--why" id="why">
       <div class="container section__inner">
         <h2 class="section__title section__title--center">Why Choose Raiment Co.</h2>
@@ -211,15 +126,24 @@
           </ul>
         </div>
         <div class="section__media">
-          <div class="contact-highlight">
-            <h3 class="contact-highlight__title">Partner With Confidence</h3>
-            <p class="contact-highlight__text">
-              Our Dhaka-based team is ready to coordinate sampling, production follow-up, and shipment tracking across our vetted factory network.
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="name">Name</label>
+              <input class="contact-form__input" type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="email">Email</label>
+              <input class="contact-form__input" type="email" id="email" name="email" placeholder="name@example.com" required />
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="message">Message</label>
+              <textarea class="contact-form__input contact-form__input--textarea" id="message" name="message" rows="4" placeholder="Tell us about your sourcing needs" required></textarea>
+            </div>
+            <button class="button button--primary contact-form__submit" type="submit">Send Message</button>
+            <p class="contact-form__success" id="contact-success" role="status" aria-live="polite" hidden>
+              Thank you for contacting Raiment Co. We will get back to you shortly.
             </p>
-            <p class="contact-highlight__text">
-              Share your upcoming collections and we will assemble a sourcing roadmap aligned to your quality benchmarks.
-            </p>
-          </div>
+          </form>
         </div>
       </div>
     </section>
