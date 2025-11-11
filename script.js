@@ -1,8 +1,7 @@
 const headerToggle = document.querySelector('.site-header__toggle');
 const primaryNav = document.querySelector('.site-header__nav');
-const contactForm = document.getElementById('contact-form');
-const contactSuccess = document.getElementById('contact-success');
 const currentYearEl = document.getElementById('current-year');
+const carousel = document.querySelector('[data-carousel]');
 
 // Mobile navigation toggle
 if (headerToggle && primaryNav) {
@@ -32,17 +31,57 @@ smoothScrollLinks.forEach((link) => {
   });
 });
 
-// Contact form handler
-if (contactForm && contactSuccess) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    contactSuccess.hidden = false;
-    contactForm.reset();
-  });
-}
-
 // Set current year in footer
 if (currentYearEl) {
   const currentYear = new Date().getFullYear();
   currentYearEl.textContent = String(currentYear);
+}
+
+// Product showcase carousel
+if (carousel) {
+  const track = carousel.querySelector('.carousel__track');
+  const slides = track ? Array.from(track.children) : [];
+  const prevButton = carousel.querySelector('[data-carousel-prev]');
+  const nextButton = carousel.querySelector('[data-carousel-next]');
+  let currentIndex = 0;
+  let autoplayId;
+
+  const updateCarousel = () => {
+    if (!track) return;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('carousel__slide--active', index === currentIndex);
+    });
+  };
+
+  const moveToIndex = (index) => {
+    if (!slides.length) return;
+    currentIndex = (index + slides.length) % slides.length;
+    updateCarousel();
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    autoplayId = window.setInterval(() => {
+      moveToIndex(currentIndex + 1);
+    }, 7000);
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayId) {
+      window.clearInterval(autoplayId);
+      autoplayId = undefined;
+    }
+  };
+
+  prevButton?.addEventListener('click', () => moveToIndex(currentIndex - 1));
+  nextButton?.addEventListener('click', () => moveToIndex(currentIndex + 1));
+
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  carousel.addEventListener('focusin', stopAutoplay);
+  carousel.addEventListener('focusout', startAutoplay);
+
+  updateCarousel();
+  startAutoplay();
 }
