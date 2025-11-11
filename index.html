@@ -21,6 +21,7 @@
           <li class="site-header__nav-item"><a class="site-header__nav-link" href="#home">Home</a></li>
           <li class="site-header__nav-item"><a class="site-header__nav-link" href="#about">About</a></li>
           <li class="site-header__nav-item"><a class="site-header__nav-link" href="#services">What We Offer</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#portfolio">Product Showcase</a></li>
           <li class="site-header__nav-item"><a class="site-header__nav-link" href="#why">Why Raiment Co.</a></li>
           <li class="site-header__nav-item"><a class="site-header__nav-link" href="#commitment">Our Commitment</a></li>
           <li class="site-header__nav-item"><a class="site-header__nav-link" href="#contact">Contact</a></li>
@@ -113,6 +114,75 @@
       </div>
     </section>
 
+    <section class="section section--portfolio" id="portfolio">
+      <div class="container section__inner">
+        <h2 class="section__title section__title--center">Product Showcase</h2>
+        <p class="section__text section__text--center">
+          A curated glimpse at the seasonal garments, responsibly sourced fabrics, and model fittings we prepare for buyers worldwide.
+        </p>
+
+        <div class="carousel" data-carousel>
+          <button class="carousel__control carousel__control--prev" type="button" data-carousel-prev aria-label="Previous featured garment">
+            ‹
+          </button>
+          <div class="carousel__viewport">
+            <div class="carousel__track">
+              <figure class="carousel__slide carousel__slide--active">
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80" alt="Tailored navy blazer on mannequin in a studio" />
+                <figcaption class="carousel__caption">Menswear tailoring for premium retailers</figcaption>
+              </figure>
+              <figure class="carousel__slide">
+                <img src="https://images.unsplash.com/photo-1521572276343-91ce8883d4da?auto=format&fit=crop&w=1200&q=80" alt="Neatly folded knit sweaters in neutral colors" />
+                <figcaption class="carousel__caption">Sustainable knit programs in versatile palettes</figcaption>
+              </figure>
+              <figure class="carousel__slide">
+                <img src="https://images.unsplash.com/photo-1492447166138-50c3889fccb1?auto=format&fit=crop&w=1200&q=80" alt="Male model wearing indigo denim jacket" />
+                <figcaption class="carousel__caption">Menswear fittings to validate drape and comfort</figcaption>
+              </figure>
+              <figure class="carousel__slide">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Display of pastel dresses hanging on a rack" />
+                <figcaption class="carousel__caption">Ready-to-ship womenswear dresses curated for buyers</figcaption>
+              </figure>
+              <figure class="carousel__slide">
+                <img src="https://images.unsplash.com/photo-1516727003284-a96541e51e1c?auto=format&fit=crop&w=1200&q=80" alt="Close up of quality inspection on stitched seams" />
+                <figcaption class="carousel__caption">Quality assurance across every production run</figcaption>
+              </figure>
+            </div>
+          </div>
+          <button class="carousel__control carousel__control--next" type="button" data-carousel-next aria-label="Next featured garment">
+            ›
+          </button>
+        </div>
+
+        <div class="product-gallery" aria-label="Product gallery">
+          <figure class="product-gallery__item">
+            <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=900&q=80" alt="Assorted women's blouses on wooden hangers" />
+            <figcaption class="product-gallery__caption">Woven blouses with artisanal trims</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=80" alt="Embellished dresses displayed on boutique mannequins" />
+            <figcaption class="product-gallery__caption">Statement dresses tailored for contemporary collections</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="https://images.unsplash.com/photo-1520962982531-8995fb92f6c1?auto=format&fit=crop&w=900&q=80" alt="Stacked denim jeans with wash variations" />
+            <figcaption class="product-gallery__caption">Denim programs with controlled washing</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Young male model in relaxed cotton set" />
+            <figcaption class="product-gallery__caption">Menswear presentation of relaxed cotton resortwear</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=900&q=80" alt="Color cards and fabric swatches on table" />
+            <figcaption class="product-gallery__caption">Color-matched fabric swatches for approvals</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=80" alt="Menswear models in coordinated outfits" />
+            <figcaption class="product-gallery__caption">Coordinated looks styled for lookbooks</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--contact" id="contact">
       <div class="container section__inner section__inner--split">
         <div class="section__content">
@@ -126,24 +196,11 @@
           </ul>
         </div>
         <div class="section__media">
-          <form class="contact-form" id="contact-form" novalidate>
-            <div class="contact-form__group">
-              <label class="contact-form__label" for="name">Name</label>
-              <input class="contact-form__input" type="text" id="name" name="name" placeholder="Your name" required />
-            </div>
-            <div class="contact-form__group">
-              <label class="contact-form__label" for="email">Email</label>
-              <input class="contact-form__input" type="email" id="email" name="email" placeholder="name@example.com" required />
-            </div>
-            <div class="contact-form__group">
-              <label class="contact-form__label" for="message">Message</label>
-              <textarea class="contact-form__input contact-form__input--textarea" id="message" name="message" rows="4" placeholder="Tell us about your sourcing needs" required></textarea>
-            </div>
-            <button class="button button--primary contact-form__submit" type="submit">Send Message</button>
-            <p class="contact-form__success" id="contact-success" role="status" aria-live="polite" hidden>
-              Thank you for contacting Raiment Co. We will get back to you shortly.
-            </p>
-          </form>
+          <div class="contact-cta">
+            <p class="contact-cta__lead">Prefer a direct conversation?</p>
+            <p class="contact-cta__text">Schedule a sourcing consultation and we will tailor a line-up of factories matched to your product mix.</p>
+            <a class="button button--primary" href="mailto:info@raimentcobd.com">Book a Call</a>
+          </div>
         </div>
       </div>
     </section>
