@@ -19,14 +19,25 @@ smoothScrollLinks.forEach((link) => {
     const targetId = link.getAttribute('href');
     if (!targetId || targetId === '#') return;
 
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      event.preventDefault();
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+    const closeMobileNav = () => {
       if (primaryNav && primaryNav.classList.contains('site-header__nav--open')) {
         primaryNav.classList.remove('site-header__nav--open');
         headerToggle?.setAttribute('aria-expanded', 'false');
       }
+    };
+
+    if (targetId === '#top') {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      closeMobileNav();
+      return;
+    }
+
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      event.preventDefault();
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      closeMobileNav();
     }
   });
 });
