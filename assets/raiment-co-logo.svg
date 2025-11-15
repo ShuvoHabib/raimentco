@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 180" role="img" aria-labelledby="title desc">
+  <title id="title">Raiment Co. logo</title>
+  <desc id="desc">Stylised overlapping garments in deep brown and orange with the company name below.</desc>
+  <defs>
+    <linearGradient id="highlight" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0" stop-color="#5b3419" />
+      <stop offset="1" stop-color="#2c190c" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0" stop-color="#ffb55a" />
+      <stop offset="1" stop-color="#f07000" />
+    </linearGradient>
+  </defs>
+  <g fill-rule="evenodd" stroke-linejoin="round" stroke-width="12">
+    <path fill="url(#highlight)" stroke="#2c190c" d="M94 30h70l46 120H93c-10 0-19-6-22-15L43 76c-4-11 4-23 16-23h17l8-17c3-7 10-11 17-11Z"/>
+    <path fill="#2c190c" stroke="#1a0f07" d="M164 30h70l46 120h-117c-10 0-19-6-22-15l-28-74c-4-11 4-23 16-23h17l8-17c3-7 10-11 17-11Z"/>
+    <path fill="url(#accent)" stroke="#d26000" d="M234 30h70l46 120H233c-10 0-19-6-22-15l-28-74c-4-11 4-23 16-23h17l8-17c3-7 10-11 17-11Z"/>
+  </g>
+  <g fill="#2c190c">
+    <circle cx="123" cy="66" r="6" />
+    <circle cx="193" cy="66" r="6" />
+    <path d="M131 42h40v12h-40zm70 0h40v12h-40z" />
+  </g>
+  <text x="50%" y="162" font-family="'Montserrat', 'Segoe UI', sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#2c190c" letter-spacing="4">
+    RAIMENT CO.
+  </text>
+</svg>
