@@ -1,0 +1,15 @@
+# .cpanel.yml for cPanel Git™ deployment
+# Last modified: 2025-11-20
+# This file configures deployment of your website files to public_html.
+# Update DEPLOYPATH to match your cPanel account's public_html path.
+
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/example/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp garment.avif $DEPLOYPATH
+    - /bin/cp whatsapp.png $DEPLOYPATH
+    - /bin/cp logo.jpeg $DEPLOYPATH
