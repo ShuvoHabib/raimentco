@@ -24,6 +24,25 @@ body {
   line-height: 1.6;
 }
 
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background-color: #ffffff;
+  color: var(--color-primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  z-index: 1200;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translate(-50%, 20%);
+  outline: 3px solid var(--color-accent);
+}
+
 .whatsapp-float {
   position: fixed;
   right: 1.5rem;
